@@ -109,25 +109,62 @@ main {
 	align-items: center;
 
 }
+.grupo__btn{
+	display: grid;
+	grid-template-columns: repeat(1fr,1fr) ;
+	gap: 20px;
+	grid-template-areas: "volver enviar";
+}
 
 .formulario__btn{
 	height: 45px;
 	line-height: 45px;
-	width: 30%;
+	width: 50%;
 	background-color: #205fd5a1;
 	color: #fff;
 	border: none;
 	border-radius: 3px;
 	cursor: pointer;
 	transition: .1 ease all;
+	display: inline-block;
 }
 
 .formulario__btn:hover{
 	background-color: #205FD5;
 	box-shadow: 3px 0 30px rgba(163, 163, 163, 1);
 }
-
-
+.formulario__btn_volver{
+	height: 45px;
+	line-height: 45px;
+	width: 100%;
+	background-color: #356bd05d;
+	color: #fff;
+	border: none;
+	border-radius: 3px;
+	cursor: pointer;
+	transition: .1 ease all;
+	display: inline-block;
+}
+#btn_volver{
+	width: 100%;
+}
+a{
+	height: 45px;
+	line-height: 45px;
+	width: 50%;
+	background-color: #205fd5a1;
+	color: #fff;
+	border: none;
+	text-align: center;
+	border-radius: 3px;
+	cursor: pointer;
+	transition: .1 ease all;
+	display: inline-block;
+}
+a:hover{
+	background-color: #205FD5;
+	box-shadow: 3px 0 30px rgba(163, 163, 163, 1);
+}
 .formulario__mensaje-exito{
 	font-size: 14px;
 	color: #119200;
