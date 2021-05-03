@@ -1,0 +1,263 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.rutinas a,
+.recetas a,
+.contacto a{
+    text-decoration: none;
+    outline: none;
+    font-weight: 500;
+    color: #5C4DAC;
+    display: inline-block;
+    padding: 30px;
+    width: 50%;
+    
+    font-size: 15px;
+    align-items: center;
+    text-align: center;
+   
+    transition: .3s ease-out all;
+}
+
+.rutinas a:hover,
+.recetas a:hover,
+.contacto a:hover{
+    text-decoration: underline;
+    background: #5C4DAC;
+    color: #e1e1e1;   
+    height: 50px;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    background-color: #cacaca;
+    font-family: 'Courier New', Courier, monospace;
+    
+}
+
+/**=============================*/
+/**==========HEADER=============*/
+/**=============================*/
+.navbar{
+    
+    background-color : #E7E7E7;    
+    position: sticky;
+    top: 0;
+    text-align: center;
+    align-items: center;
+    display: grid;
+	grid-template-columns: 80px repeat(3, 330px) 1fr;
+    grid-template-rows: repeat(1, auto);
+	gap: 10px;
+    grid-template-areas: "logo rutina receta contacto sesion"
+    
+}
+
+.rutinas{
+    width: 100%;
+    height: 50px;
+    margin: 0; 
+    text-align: center;
+    justify-content: space-between;
+    grid-area: rutina;
+}
+.recetas{
+    width: 100%;
+    height: 50px;
+    margin: 0; 
+    text-align: center;
+    justify-content: space-between;
+    grid-area: receta;
+}
+.contacto{
+    width: 100%;
+    height: 50px;
+    margin: 0; 
+    text-align: center;
+    justify-content: space-between;
+    grid-area: contacto;
+}
+
+#logo{
+    margin-left: 10px;
+    margin-top: 10px;
+    width: 80px;
+    height: 80px;
+
+    grid-area: logo;
+}
+
+/*======================*/
+/*== Inicio de sesion ==*/
+/*======================*/
+.inicia_sesion{
+    margin: 0;
+    padding: 5px;
+    width: 85%;
+    background-color: #5C4DAC;
+    color: #E7E7E7;
+    text-align: left;
+    grid-area: sesion;
+    top: 0;
+}
+.titulo_iniciar_sesion{
+    padding: 5px;
+    font-size: 20px;
+    text-align: center;
+
+}
+.form_iniciar_sesion{
+    margin-top: 15px;
+    margin-bottom: 3px;
+    text-align: left;
+}
+
+/*------Formulario------*/
+/*------Formulario------*/
+/*------Formulario------*/
+
+.formulario{
+    display: grid;
+	grid-template-columns: 50% 50% ;
+	gap: 20px;
+}
+.formulario__grupo-input{
+	position: relative;
+}
+
+.formulario__input{    
+    width: 80%;
+    height: 20px;
+    margin-left: 5px;
+    padding-left: 5px;
+    font-size: 10px;    
+    color: #555;
+    background-color: #fff;    
+    border: 1px solid #ccc;
+    border-radius: 4px;	
+}
+.formulario__input_mensaje{
+	width: 70%;
+	background-color:#fff;
+	border: 3px solid transparent;
+	border-radius: 3px;	
+	padding: 10px ;
+	transition: .4s ease all;
+}
+.formulario__input:focus,
+.formulario__input_mensaje:focus{
+	border: 3px solid #E09C09;
+	outline: none;
+	box-shadow: 3px 0 30px rgba(163, 163, 163, 0.4);
+}
+.mensaje_registrarse{
+    width: 50%;  
+    padding-left: 20px;
+    color: #E7E7E7  ;
+    display: inline-block;       
+    text-align: left; 
+    
+    outline: none; 
+    font-size: 13px;
+    
+}
+
+.formulario__input-error{
+    width: 70%; 
+    color: #E7E7E7;
+	font-size: 10px;
+	margin-top: 5px;
+	display: none;
+}
+.formulario__input-error-activo{
+	display: block;
+}
+
+.formulario__validacion-estado{
+	position: absolute;
+	right: 10px;
+	bottom: 15px;
+	z-index: 100;
+	font-size: 16px;
+	opacity: 0;
+}
+
+.formulario__mensaje{
+	height: 45px;
+	line-height: 45px;
+	background-color: #f66860;
+	padding: 0 15px;
+	border-radius: 3px;
+	display: block  ;
+}
+.formulario__mensaje-activo{
+	display: block;
+}
+.formulario__mensaje p{
+	margin: 0;
+}
+
+.formulario__grupo-btn-enviar{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+}
+
+/* ----- -----  Estilos para Validacion ----- ----- */
+
+.formulario__grupo-incorrecto 
+.formulario__label{
+	color:#bb2929;
+}
+.formulario__grupo-incorrecto 
+.formulario__validacion-estado{
+	color:#bb2929;
+	opacity: 1;
+}
+.formulario__grupo-incorrecto .formulario__input,
+.formulario__grupo-incorrecto .formulario__input_mensaje{
+	border: 3px solid #bb2929;
+}
+/*== Footer ==*/
+.footer{
+   
+    width: 100%;
+    height: 50px;
+    background-color: #3A3265;
+    border: 5px solid #0000;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: " creadores contacto ";
+    
+    }
+.creadores_footer{
+    text-align: center;
+    grid-area: creadores;
+}
+.contacto_footer{
+    text-align: center;
+    grid-area: contacto;
+}
+
+
+/* ----- -----  Mediaqueries ----- ----- */
+
+@media screen and (max-width: 800px){
+	.formulario{
+		grid-template-columns: 1fr;
+	}
+	.formulario__grupo-terminos,
+	.formulario__mensaje,
+	.formulario__grupo-btn-enviar{
+	grid-column: span 1;
+	}
+	.formulario__btn{
+		width:  100%;
+	}
+}
+
