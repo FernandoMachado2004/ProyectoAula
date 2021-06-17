@@ -4,10 +4,12 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title> Formulario de registro </title>
-	
+
+	<script src="js/formulario_contacto	.js"></script>
+	<script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
 	<link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
 	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"> 
-	<link rel="stylesheet" href="./css/formulario.css">
+	<link rel="stylesheet" href="./css/formulario_contacto.css">
 </head>
 <body>
 	<main>
@@ -61,7 +63,7 @@
 			<div class="formulario__grupo" id="grupo__mensaje">
 				<label for="mensaje" class="formulario__label"> Mensaje </label>
 				<div class="formulario__grupo-input">
-					<input type="text" class="formulario__input_mensaje" name="mensaje" id="mensaje" maxlength="300">
+					<textarea type="text" class="formulario__textarea_mensaje" name="mensaje" id="mensaje" maxlength="300"></textarea>
 					<i class="formulario__validacion-estado fas fa-times-circle" ></i>
 				</div>
 				<p class="formulario__input-error"> El mensaje debe contener mas de 5 dígitos y solo puedes incluir letras. </p>
@@ -85,7 +87,7 @@
 			<!--Grupo Botones-->
 			<div class="grupo__btn">
 
-			<div class=" formulario__grupo formulario__grupo-btn-enviar">
+			<div class=" formulario__grupo formulario__grupo-btn-volver">
 				<a href="./index.html"><button type="button" class="formulario__btn_volver" id="btn_volver"> Volver </button></a>
 				
 			</div>
@@ -98,7 +100,6 @@
 		</form>
 	</main>
 
-	<script src="js/formulario.js"></script>
-	<script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
+	
 </body>
 </html>

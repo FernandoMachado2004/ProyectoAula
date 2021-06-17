@@ -3,22 +3,22 @@ const inputs = document.querySelectorAll('#formulario input');
 
 const expresiones = {
 	nombre: /^[a-zA-ZÀ-ÿ\s]{1,40}$/, 
-	apellido_paterno: /^[a-zA-ZÀ-ÿ\s]{1,40}$/,
+	id: /^[a-zA-ZÀ-ÿ\s]{1,40}$/,
 	apellido_materno: /^[a-zA-ZÀ-ÿ\s]{1,40}$/,
 	correo: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
-	telefono: /^\d{7,14}$/, 
-    asunto:/^[a-zA-ZÀ-ÿ\s]{5,60}$/,
-    mensaje:/^[a-zA-ZÀ-ÿ\s]{5,300}$/
+	asunto: /^[a-zA-ZÀ-ÿ\s]{1,40}$/,
+	mensaje: /^\d{7,14}$/, 
+    
 }
 
 const campos = {
 	nombre: false,
-	apellido_paterno: false,
+	id: false,
 	apellido_materno: false,
 	correo: false,
-	telefono: false,
 	asunto: false,
-	mensaje: false
+	mensaje: false,
+	
 }
 
 const validarFormulario = (e) => {
@@ -26,19 +26,20 @@ const validarFormulario = (e) => {
 		case "nombre":
 			validarCampo(expresiones.nombre, e.target, 'nombre');
 		break;
-		case "apellido_paterno":
-			validarCampo(expresiones.apellido_paterno, e.target, 'apellido_paterno');
-		break;
-		case "apellido_materno":
-			validarCampo(expresiones.apellido_materno, e.target, 'apellido_materno');
+		case "id":
+			validarCampo(expresiones.id, e.target, 'id');
 		break;
 		case "correo":
 			validarCampo(expresiones.correo, e.target, 'correo');
 		break;
-		case "telefono":
-			validarCampo(expresiones.telefono, e.target, 'telefono');
+		case "asunto":
+			validarCampo(expresiones.asunto, e.target, 'asunto');
 		break;
         
+		case "mensaje":
+			validarCampo(expresiones.mensaje, e.target, 'mensaje');
+		break;
+		
 	}
 }
 
@@ -69,7 +70,7 @@ formulario.addEventListener('submit', (e) => {
 	e.preventDefault();
 
 	const terminos = document.getElementById('terminos');
-	if(campos.nombre && campos.apellido_paterno && campos.apellido_materno && campos.correo && campos.telefono && terminos.checked ){
+	if(campos.nombre && campos.id && campos.apellido_materno && campos.correo && campos.mensaje && terminos.checked ){
 		formulario.reset();
 
 		document.getElementById('formulario__mensaje-exito').classList.add('formulario__mensaje-exito-activo');
